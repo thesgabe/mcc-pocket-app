@@ -29,7 +29,6 @@ function renderHome() {
   <img src="${h.map}" alt="" />
   <span>${h.number}</span>
 </button>
-        
   
         `).join("")}
       </div>
