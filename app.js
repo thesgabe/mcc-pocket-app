@@ -1,5 +1,6 @@
 let currentHole = null;
 let currentTab = "map";
+let touchStartX = 0;
 
 const app = document.getElementById("app");
 const title = document.getElementById("title");
@@ -21,6 +22,7 @@ function renderHome() {
 
   app.innerHTML = `
     <section class="home">
+      <button class="game-launch" onclick="renderGame()">Shape Game</button>
       <div class="hole-grid">
         ${window.HOLES.map(h => `
           <button class="hole-card" onclick="openHole(${h.number})">
@@ -40,8 +42,6 @@ function openHole(n) {
 }
 
 function renderHole() {
-  if (!currentHole) return renderHome();
-
   title.textContent = `Hole ${currentHole.number}`;
   subtitle.textContent = currentHole.quick;
   backBtn.classList.remove("hidden");
@@ -62,13 +62,14 @@ function renderHole() {
   } else {
     const s = currentHole.summary;
     app.innerHTML = `
-      <section class="hole-view notes">
+      <section class="hole-view notes-page">
         <div class="quick-note">${currentHole.quick}</div>
-        <article class="note-card"><h3>Overall movement</h3><p>${s.overall}</p></article>
-        <article class="note-card"><h3>Safe miss</h3><p>${s.safeMiss}</p></article>
-        <article class="note-card"><h3>Avoid</h3><p>${s.avoid}</p></article>
-        <article class="note-card"><h3>Putting</h3><p>${s.putting}</p></article>
-        <article class="note-card"><h3>Approach</h3><p>${s.approach}</p></article>
+
+        <div class="note-block"><strong>Overall movement</strong><p>${s.overall}</p></div>
+        <div class="note-block"><strong>Best miss</strong><p>${s.safeMiss}</p></div>
+        <div class="note-block"><strong>Avoid</strong><p>${s.avoid}</p></div>
+        <div class="note-block"><strong>Putting read</strong><p>${s.putting}</p></div>
+        <div class="note-block"><strong>Approach strategy</strong><p>${s.approach}</p></div>
       </section>
     `;
   }
@@ -79,9 +80,29 @@ function go(delta) {
   let n = currentHole.number + delta;
   if (n < 1) n = 18;
   if (n > 18) n = 1;
-  currentHole = window.HOLES.find(h => h.number === n);
-  currentTab = "map";
-  renderHole();
+  openHole(n);
+}
+
+function renderGame() {
+  title.textContent = "Shape Game";
+  subtitle.textContent = "Guess the hole by green shape";
+  backBtn.classList.remove("hidden");
+  bottomNav.classList.add("hidden");
+
+  const shuffled = [...window.HOLES].sort(() => Math.random() - 0.5);
+
+  app.innerHTML = `
+    <section class="game">
+      ${shuffled.map(h => `
+        <div class="game-card" onclick="this.classList.toggle('revealed')">
+          <div class="shape-only">
+            <img src="${h.map}" alt="Mystery green shape" />
+          </div>
+          <div class="answer">Hole ${h.number}</div>
+        </div>
+      `).join("")}
+    </section>
+  `;
 }
 
 backBtn.addEventListener("click", renderHome);
@@ -90,8 +111,17 @@ nextBtn.addEventListener("click", () => go(1));
 mapTab.addEventListener("click", () => { currentTab = "map"; renderHole(); });
 notesTab.addEventListener("click", () => { currentTab = "notes"; renderHole(); });
 
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => navigator.serviceWorker.register("service-worker.js"));
-}
+document.addEventListener("touchstart", e => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener("touchend", e => {
+  if (!currentHole) return;
+  const diff = e.changedTouches[0].screenX - touchStartX;
+  if (Math.abs(diff) > 70) {
+    if (diff < 0) go(1);
+    else go(-1);
+  }
+});
 
 renderHome();
