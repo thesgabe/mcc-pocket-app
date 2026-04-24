@@ -1,7 +1,7 @@
 window.HOLES = [
   {
     "number": 1,
-    "map": "images/hole-1.svg",
+    "map": "images/IMG_3954.jpeg",
     "summary": {
       "overall": "Add overall green movement here.",
       "safeMiss": "Add preferred miss here.",
@@ -13,7 +13,7 @@ window.HOLES = [
   },
   {
     "number": 2,
-    "map": "images/hole-2.svg",
+    "map": "images/IMG_3955.jpeg",
     "summary": {
       "overall": "Add overall green movement here.",
       "safeMiss": "Add preferred miss here.",
@@ -25,7 +25,7 @@ window.HOLES = [
   },
   {
     "number": 3,
-    "map": "images/hole-3.svg",
+    "map": "images/IMG_3956.jpeg",
     "summary": {
       "overall": "Add overall green movement here.",
       "safeMiss": "Add preferred miss here.",
@@ -37,7 +37,7 @@ window.HOLES = [
   },
   {
     "number": 4,
-    "map": "images/hole-4.svg",
+    "map": "images/IMG_3957.jpeg",
     "summary": {
       "overall": "Add overall green movement here.",
       "safeMiss": "Add preferred miss here.",
@@ -49,7 +49,7 @@ window.HOLES = [
   },
   {
     "number": 5,
-    "map": "images/hole-5.svg",
+    "map": "images/IMG_3958.jpeg",
     "summary": {
       "overall": "Add overall green movement here.",
       "safeMiss": "Add preferred miss here.",
@@ -61,7 +61,7 @@ window.HOLES = [
   },
   {
     "number": 6,
-    "map": "images/hole-6.svg",
+    "map": "images/IMG_3959.jpeg",
     "summary": {
       "overall": "Add overall green movement here.",
       "safeMiss": "Add preferred miss here.",
@@ -73,7 +73,7 @@ window.HOLES = [
   },
   {
     "number": 7,
-    "map": "images/hole-7.svg",
+    "map": "images/IMG_3960.jpeg",
     "summary": {
       "overall": "Add overall green movement here.",
       "safeMiss": "Add preferred miss here.",
@@ -85,7 +85,7 @@ window.HOLES = [
   },
   {
     "number": 8,
-    "map": "images/hole-8.svg",
+    "map": "images/IMG_3961.jpeg",
     "summary": {
       "overall": "Add overall green movement here.",
       "safeMiss": "Add preferred miss here.",
@@ -97,7 +97,7 @@ window.HOLES = [
   },
   {
     "number": 9,
-    "map": "images/hole-9.svg",
+    "map": "images/IMG_3962.jpeg",
     "summary": {
       "overall": "Add overall green movement here.",
       "safeMiss": "Add preferred miss here.",
@@ -109,7 +109,7 @@ window.HOLES = [
   },
   {
     "number": 10,
-    "map": "images/hole-10.svg",
+    "map": "images/IMG_3963.jpeg",
     "summary": {
       "overall": "Add overall green movement here.",
       "safeMiss": "Add preferred miss here.",
@@ -121,7 +121,7 @@ window.HOLES = [
   },
   {
     "number": 11,
-    "map": "images/hole-11.svg",
+    "map": "images/IMG_3964.jpeg",
     "summary": {
       "overall": "Add overall green movement here.",
       "safeMiss": "Add preferred miss here.",
@@ -133,7 +133,7 @@ window.HOLES = [
   },
   {
     "number": 12,
-    "map": "images/hole-12.svg",
+    "map": "images/IMG_3965.jpeg",
     "summary": {
       "overall": "Add overall green movement here.",
       "safeMiss": "Add preferred miss here.",
@@ -145,7 +145,7 @@ window.HOLES = [
   },
   {
     "number": 13,
-    "map": "images/hole-13.svg",
+    "map": "images/IMG_3966.jpeg",
     "summary": {
       "overall": "Add overall green movement here.",
       "safeMiss": "Add preferred miss here.",
@@ -157,7 +157,7 @@ window.HOLES = [
   },
   {
     "number": 14,
-    "map": "images/hole-14.svg",
+    "map": "images/IMG_3967.jpeg",
     "summary": {
       "overall": "Add overall green movement here.",
       "safeMiss": "Add preferred miss here.",
@@ -169,7 +169,7 @@ window.HOLES = [
   },
   {
     "number": 15,
-    "map": "images/hole-15.svg",
+    "map": "images/IMG_3968.jpeg",
     "summary": {
       "overall": "Add overall green movement here.",
       "safeMiss": "Add preferred miss here.",
@@ -181,7 +181,7 @@ window.HOLES = [
   },
   {
     "number": 16,
-    "map": "images/hole-16.svg",
+    "map": "images/IMG_3969.jpeg",
     "summary": {
       "overall": "Add overall green movement here.",
       "safeMiss": "Add preferred miss here.",
@@ -193,7 +193,7 @@ window.HOLES = [
   },
   {
     "number": 17,
-    "map": "images/hole-17.svg",
+    "map": "images/IMG_3970.jpeg",
     "summary": {
       "overall": "Add overall green movement here.",
       "safeMiss": "Add preferred miss here.",
@@ -205,7 +205,7 @@ window.HOLES = [
   },
   {
     "number": 18,
-    "map": "images/hole-18.svg",
+    "map": "images/IMG_3971.jpeg",
     "summary": {
       "overall": "Add overall green movement here.",
       "safeMiss": "Add preferred miss here.",
