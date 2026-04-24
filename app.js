@@ -26,8 +26,7 @@ function renderHome() {
       <div class="hole-grid">
         ${window.HOLES.map(h => `
           <button class="hole-card" onclick="openHole(${h.number})">
-            <strong>${h.number}</strong>
-            <span>${h.quick}</span>
+          ${h.number}
           </button>
         `).join("")}
       </div>
