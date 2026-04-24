@@ -95,12 +95,13 @@ p { margin: 0; }
   border: 1px solid var(--line);
   box-shadow: 0 6px 22px rgba(0,0,0,.11);
   max-height: calc(100vh - 170px);
+  touch-action: pan-x pan-y pinch-zoom;
 }
 
 .map-wrap img {
   display: block;
   width: 100%;
-  min-width: 680px;
+  min-width: 100%;
   height: auto;
   background: white;
 }
