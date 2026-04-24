@@ -25,9 +25,12 @@ function renderHome() {
       <button class="game-launch" onclick="renderGame()">Shape Game</button>
       <div class="hole-grid">
         ${window.HOLES.map(h => `
-          <button class="hole-card" onclick="openHole(${h.number})">
-          ${h.number}
-          </button>
+       <button class="hole-card" onclick="openHole(${h.number})">
+  <img src="${h.map}" alt="" />
+  <span>${h.number}</span>
+</button>
+        
+  
         `).join("")}
       </div>
     </section>
