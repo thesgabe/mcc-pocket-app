@@ -22,7 +22,7 @@ function renderHome() {
 
   app.innerHTML = `
     <section class="home">
-      <button class="game-launch" onclick="renderGame()">Shape Game</button>
+      
       <div class="hole-grid">
         ${window.HOLES.map(h => `
        <button class="hole-card" onclick="openHole(${h.number})">
@@ -84,27 +84,7 @@ function go(delta) {
   openHole(n);
 }
 
-function renderGame() {
-  title.textContent = "Shape Game";
-  subtitle.textContent = "Guess the hole by green shape";
-  backBtn.classList.remove("hidden");
-  bottomNav.classList.add("hidden");
 
-  const shuffled = [...window.HOLES].sort(() => Math.random() - 0.5);
-
-  app.innerHTML = `
-    <section class="game">
-      ${shuffled.map(h => `
-        <div class="game-card" onclick="this.classList.toggle('revealed')">
-          <div class="shape-only">
-            <img src="${h.map}" alt="Mystery green shape" />
-          </div>
-          <div class="answer">Hole ${h.number}</div>
-        </div>
-      `).join("")}
-    </section>
-  `;
-}
 
 backBtn.addEventListener("click", renderHome);
 prevBtn.addEventListener("click", () => go(-1));
